@@ -33,7 +33,10 @@ async function loadPostsCollection() {
             .MongoClient
             .connect(
                 'mongodb+srv://lucian:QFoCa1Ewj6j7ni22@mini-posts-pai4e.mongodb.net/mini-posts3000?retryWrites=true&w=majority',
-                { useNewUrlParser: true }
+                {
+                    useNewUrlParser: true,
+                    useUnifiedTopology: true
+                }
             );
     return client.db('mini-posts3000').collection('posts');
 }
