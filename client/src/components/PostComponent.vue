@@ -1,8 +1,7 @@
 <template>
   <div class="container">
-    <h1>Latest Posts</h1>
     <div class="create-post">
-      <label for="create-post">Add a post</label>
+      <label for="create-post">Add a mini post</label>
       <input
         type="text"
         id="create-post"
@@ -14,6 +13,7 @@
     </div>
     <hr />
     <p class="error" v-if="error">{{error}}</p>
+    <h1>Latest Posts</h1>
     <div class="posts-container">
       <div
         class="post"
@@ -23,7 +23,7 @@
         v-bind:key="post._id"
       >
         <span aria-hidden="true" v-on:click="deletePost(post._id)">x</span>
-        {{`${post.createdAt.getDate()}/${post.createdAt.getMonth()}/${post.createdAt.getFullYear()} `}}
+        {{`${post.createdAt.getDate()}/${post.createdAt.getMonth()+1}/${post.createdAt.getFullYear()} `}}
         <p class="text">{{post.text}}</p>
       </div>
     </div>
@@ -98,7 +98,7 @@ div.container {
 
 p.error {
   color: #e1efe6;
-  border: 0.063rem solid #2a4d14;
+  border: 0.063rem solid #1761a0;
   background-color: #ff0000;
   padding: 0.7rem;
   margin-bottom: 1rem;
@@ -107,9 +107,14 @@ p.error {
 div.post {
   position: relative;
   color: #000;
-  border: 0.063rem solid #2a4d14;
+  border: 0.063rem solid #1761a0;
   border-radius: 0.4rem;
-  background-color: #73e067;
+  background: rgb(131, 255, 117);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 255, 117, 1) 20%,
+    rgba(115, 224, 103, 1) 100%
+  );
   padding: 0.6rem 0.6rem 2rem 0.6rem;
   box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.4);
   margin-bottom: 1rem;
@@ -138,7 +143,7 @@ div.create-post input {
   font-size: 1.2rem;
   margin: 0 auto;
   padding: 0.5rem 1rem;
-  border: 0.02rem solid #2a4d14;
+  border: 0.063rem solid #1761a0;
   border-radius: 0.4rem;
   background-color: #fff;
   box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.4);
@@ -147,7 +152,7 @@ div.create-post input {
 
 div.create-post button {
   background-color: #fff;
-  border: 0.02rem solid #2a4d14;
+  border: 0.063rem solid #1761a0;
   border-radius: 0.4rem;
   color: #000;
   padding: 0.63rem 1.2rem;
@@ -160,7 +165,12 @@ div.create-post button {
 }
 
 div.create-post button:hover {
-  background-color: #80f07d;
+  background: rgb(131, 255, 117);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 255, 117, 1) 20%,
+    rgba(115, 224, 103, 1) 100%
+  );
 }
 
 /*===== Delete post btn =====*/
@@ -174,6 +184,7 @@ div.post span {
   color: #000;
   background: transparent;
   margin-left: 95%;
+  text-shadow: 0rem 0rem 0.3rem rgba(23, 97, 160, 0.5);
 }
 
 div.created-at {
