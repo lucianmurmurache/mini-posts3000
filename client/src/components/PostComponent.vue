@@ -70,13 +70,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/*
-* Color palette:
- * #80f07d Light Green
- * #73e067 Malachite
- * #317b22 Ao English
- * #2a4d14 Lincoln Green
-*/
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap);
 
 * {
@@ -92,7 +85,7 @@ h1 {
   color: #000;
 }
 div.container {
-  max-width: 50rem;
+  max-width: 45rem;
   margin: 0 auto;
 }
 
@@ -109,14 +102,15 @@ div.post {
   color: #000;
   border: 0.063rem solid #1761a0;
   border-radius: 0.4rem;
-  background: rgb(131, 255, 117);
+  background: rgb(116, 209, 76);
   background: linear-gradient(
     90deg,
-    rgba(131, 255, 117, 1) 20%,
-    rgba(115, 224, 103, 1) 100%
+    rgba(116, 209, 76, 1) 0%,
+    rgba(115, 224, 103, 1) 50%,
+    rgba(116, 209, 76, 1) 100%
   );
   padding: 0.6rem 0.6rem 2rem 0.6rem;
-  box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0rem 0rem 0.5rem rgba(23, 97, 160, 0.6);
   margin-bottom: 1rem;
   overflow: auto;
 }
@@ -146,7 +140,7 @@ div.create-post input {
   border: 0.063rem solid #1761a0;
   border-radius: 0.4rem;
   background-color: #fff;
-  box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0rem 0rem 0.5rem rgba(23, 97, 160, 0.6);
   width: 70%;
 }
 
@@ -160,16 +154,16 @@ div.create-post button {
   text-decoration: none;
   font-size: 1rem;
   margin: 0.1rem 0.6rem;
-  box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0rem 0rem 0.5rem rgba(23, 97, 160, 0.6);
   cursor: pointer;
 }
 
 div.create-post button:hover {
-  background: rgb(131, 255, 117);
+  background: rgb(116, 209, 76);
   background: linear-gradient(
     90deg,
-    rgba(131, 255, 117, 1) 20%,
-    rgba(115, 224, 103, 1) 100%
+    rgba(115, 224, 103, 1) 10%,
+    rgba(116, 209, 76, 1) 100%
   );
 }
 
